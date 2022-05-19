@@ -10,8 +10,16 @@ const TodoWrapper = styled.div`
 	padding: 10px 0;
 	width: 100%;
 `
-const TodoText = styled.div`
-	flex: 0.6 0 0;
+const TodoText = styled.input`
+	${({isEditing}) => !isEditing && `
+		background-color: rgba(0, 0, 0, 0);
+  	border: none;
+		flex: 0.6 0 0;
+	`}
+	${({isChecked}) => isChecked && `
+		color: #2fc421;
+		text-decoration: line-through;
+	`}
 `
 
 const IconsBlock = styled.div`

@@ -1,8 +1,8 @@
 import StyledInput from "./styles"
 
-const Input = ({getInput, valueValue}) => {
+const Input = ({type, placeholder, getInput, value}) => {
 	return (
-		<StyledInput type="text" placeholder="what's need to be done?" value={valueValue} onInput = {(event) => getInput(event)}/>
+		<StyledInput type={type} placeholder={placeholder} value={value} onInput={(event) => getInput(event)}/>
 	)
 
 }

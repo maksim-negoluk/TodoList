@@ -1,4 +1,4 @@
-import TodoBlock from "../TodoBlock/TodoBlock";
+import TodoList from "../TodoList/TodoList";
 import InputBlock from "../InputBlock/InputBlock";
 import {AppWrapper} from "./style";
 import {useState} from "react";
@@ -23,7 +23,7 @@ const App = () => {
 	return (
 		<AppWrapper>
 			<InputBlock addTask={addTask}/>
-			<TodoBlock todo={todo} deleteTask={deleteTask}/>
+			<TodoList todo={todo} deleteTask={deleteTask}/>
 		</AppWrapper>
 	)
 }
